@@ -60,4 +60,31 @@ fanfeedr.getTeamStandings('ba214a05-0d53-59fd-b0ec-e016f112fba8',function(er,dat
          assert.equal(19,data[0].wins,'Arsenal has 19 wins');
     }
 });
+//last football events
+fanfeedr.lastSportEvents('0a3c27d2-a655-58e4-a49c-9f3c7411c710',function(er,data){
+    if(er){
+        assert.fail(er,undefined,"Error shouldn't happen");
+    }
+    else{
+         assert.ok(data.length>0,'Events should be empty');
+    }
+});
+//today football events
+fanfeedr.todaySportEvents('0a3c27d2-a655-58e4-a49c-9f3c7411c710',function(er,data){
+    if(er){
+        assert.fail(er,undefined,"Error shouldn't happen");
+    }
+    else{
+         assert.ok(data.length>0,'Events should be empty');
+    }
+});
+//next football events
+fanfeedr.nextSportEvents('0a3c27d2-a655-58e4-a49c-9f3c7411c710',function(er,data){
+    if(er){
+        assert.fail(er,undefined,"Error shouldn't happen");
+    }
+    else{
+         assert.ok(data.length>0,'Events should be empty');
+    }
+});
 util.log('Finished testing');
