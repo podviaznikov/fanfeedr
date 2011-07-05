@@ -9,6 +9,9 @@ Currently most of the API are implemented in Node.js. Geo, Content, Sources and 
 In API we use standard Node.js convention: callback of each API call is the last function parameter. Callback takes two
 parameters: error and data. One parameter should be always undefined.
 
+
+Also please note that we changes some naming: so leagues became sport and conferences -> leagues.
+
 # TO-DO
 
 Add more tests.
