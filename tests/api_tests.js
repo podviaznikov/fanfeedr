@@ -1,7 +1,7 @@
 var util=require('util'),
     assert=require('assert'),
     fanfeedr=require('../lib/fanfeedr.js');
-fanfeedr.init('no_key',fanfeedr.tiers.bronze,true);
+fanfeedr.init('',fanfeedr.tiers.bronze,true);
 
 module.exports={
     'test getSports':function(){
@@ -95,4 +95,15 @@ module.exports={
             }
         });
     },
+    'test getSportContent':function(){
+        fanfeedr.getSportContent('0a3c27d2-a655-58e4-a49c-9f3c7411c710',function(er,data){
+            if(er){
+                assert.fail(er,undefined,"Football content not found");
+            }
+            else{
+                assert.ok(data.length>0,"Football content shouldn't be empty");
+                assert.includes(data,'id');
+            }
+        });
+    }
 };
