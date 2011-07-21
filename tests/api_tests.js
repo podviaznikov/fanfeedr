@@ -1,7 +1,7 @@
 var util=require('util'),
     assert=require('assert'),
     fanfeedr=require('../lib/fanfeedr.js');
-fanfeedr.init('favb9uncnwxcdw52ptsqvn82',fanfeedr.tiers.bronze,true);
+fanfeedr.init('YOUR_API_KEY',fanfeedr.tiers.bronze);
 
 module.exports={
     'test getSports':function(){
